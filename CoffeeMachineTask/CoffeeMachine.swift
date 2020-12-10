@@ -13,8 +13,8 @@ struct CoffeeMachine {
     public static var orders : [Order]?
     public static var resources : [Resources]?
     private  static var order : Order?
-
-
+    
+    
     
     public static func makeOrder (newOrder: Order){
         order = newOrder
@@ -30,7 +30,6 @@ struct CoffeeMachine {
                     
                 }
                 orders?.append(newOrder)
-                processOrders()
                 
             }
         }
@@ -44,43 +43,47 @@ struct CoffeeMachine {
             guard let  processingOrder = self.orders?.first else {return}
             prepare(processingOrder: processingOrder)
             guard let readyOrder = self.orders?.first else {return}
-                       Barista.orderToDeliver = readyOrder
-                       CoffeeMachine.orders?.remove(at: 0)
+            Barista.orderToDeliver = readyOrder
+            CoffeeMachine.orders?.remove(at: 0)
             semaphore.signal()
         }
         queue.async {
-             semaphore.wait()
+            semaphore.wait()
             
-             guard let readyOrder = self.orders?.first else {return}
-                        Barista.orderToDeliver = readyOrder
-                        CoffeeMachine.orders?.remove(at: 0)
-             semaphore.signal()
-             
-         }
-
+            guard let readyOrder = self.orders?.first else {return}
+            Barista.orderToDeliver = readyOrder
+            CoffeeMachine.orders?.remove(at: 0)
+            semaphore.signal()
+            
+        }
+        
     }
     
     
     
     private static func prepare (processingOrder:Order){
         let semaphore = DispatchSemaphore(value: 1)
-            let queue = DispatchQueue.global()
+        let queue = DispatchQueue.global()
         guard let processingOrder = self.orders?.first else {return}
         //let  resources = processingOrder.resources
-            queue.async {
-                semaphore.wait()
-                if processingOrder.typeOfDrink.rawValue == "coffee"
-                {
-                    processingOrder.addCoffee()
-                    processingOrder.addWater()
+        queue.async {
+            semaphore.wait()
+            if processingOrder.typeOfDrink.rawValue == "coffee"
+            {
+                processingOrder.addCoffee()
+                processingOrder.addWater()
+                
+            }
+            else if processingOrder.typeOfDrink.rawValue == "cappuccino"{
+                processingOrder.addMilk()
+                processingOrder.addCoffee()
+                processingOrder.addWater()
+                if processingOrder.LevelOfSugar != 0{
+                    processingOrder.addSugar()
                 }
-                else if processingOrder.typeOfDrink.rawValue == "cappuccino"{
-                         processingOrder.addMilk()
-                        processingOrder.addCoffee()
-                        processingOrder.addWater()
-                    
-                }
-                semaphore.signal()
+                
+            }
+            semaphore.signal()
         }
         
     }
