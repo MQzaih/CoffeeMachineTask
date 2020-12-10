@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,125 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoffeeMachineTask" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="iC5-eK-gV9">
+                                <rect key="frame" x="72" y="59" width="260" height="178"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="260" id="OiF-zG-qPt"/>
+                                    <constraint firstAttribute="height" constant="178" id="ueu-kf-Nv4"/>
+                                </constraints>
+                            </imageView>
+                            <pickerView contentMode="scaleToFill" horizontalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="ROJ-OL-j4b">
+                                <rect key="frame" x="106" y="269" width="226" height="216"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drink:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZaV-AQ-jua">
+                                <rect key="frame" x="20" y="359" width="55" height="37"/>
+                                <fontDescription key="fontDescription" name="MuktaMahee-Regular" family="Mukta Mahee" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Depresso Without Espresso" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TmI-rJ-FBS">
+                                <rect key="frame" x="42" y="245" width="330" height="25.5"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
+                                <color key="textColor" red="5.1533070037112024e-05" green="0.26804926132131979" blue="0.15388238465080825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Quantity:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFs-Pf-h7x">
+                                <rect key="frame" x="20" y="497" width="85" height="37"/>
+                                <fontDescription key="fontDescription" name="MuktaMahee-Regular" family="Mukta Mahee" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oJQ-6A-pQo">
+                                <rect key="frame" x="140" y="502" width="13.5" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="FN5-TI-Yd4">
+                                <rect key="frame" x="181" y="499" width="94" height="32"/>
+                                <connections>
+                                    <action selector="stepper:" destination="BYZ-38-t0r" eventType="valueChanged" id="0by-hq-O9E"/>
+                                </connections>
+                            </stepper>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="751" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A03-x6-2sh">
+                                <rect key="frame" x="117" y="729" width="196" height="49"/>
+                                <fontDescription key="fontDescription" name="MuktaMahee-Regular" family="Mukta Mahee" pointSize="22"/>
+                                <color key="tintColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Place your order!">
+                                    <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="placeOrder:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fuv-nB-Fed"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ua0-gc-pX8">
+                                <rect key="frame" x="118" y="592" width="259" height="32"/>
+                                <segments>
+                                    <segment title="High"/>
+                                    <segment title="Middle "/>
+                                    <segment title="Low"/>
+                                    <segment title="No"/>
+                                </segments>
+                                <connections>
+                                    <action selector="checkSugar:" destination="BYZ-38-t0r" eventType="valueChanged" id="StA-N3-msB"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sugar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5IC-zh-qCP">
+                                <rect key="frame" x="20" y="589" width="54" height="37"/>
+                                <fontDescription key="fontDescription" name="MuktaMahee-Regular" family="Mukta Mahee" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="iC5-eK-gV9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="72" id="0XA-D8-7qX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TmI-rJ-FBS" secondAttribute="trailing" constant="42" id="0vN-MK-F3i"/>
+                            <constraint firstItem="TmI-rJ-FBS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="4j5-xZ-fGN"/>
+                            <constraint firstItem="HFs-Pf-h7x" firstAttribute="top" secondItem="ZaV-AQ-jua" secondAttribute="bottom" constant="101" id="73U-nn-1et"/>
+                            <constraint firstItem="ROJ-OL-j4b" firstAttribute="top" secondItem="iC5-eK-gV9" secondAttribute="bottom" constant="32" id="788-y2-hKC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5IC-zh-qCP" secondAttribute="bottom" constant="236" id="7se-R5-jTa"/>
+                            <constraint firstItem="Ua0-gc-pX8" firstAttribute="top" secondItem="FN5-TI-Yd4" secondAttribute="bottom" constant="61" id="9z7-ld-7ZH"/>
+                            <constraint firstItem="A03-x6-2sh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="117" id="BOF-JI-317"/>
+                            <constraint firstItem="oJQ-6A-pQo" firstAttribute="leading" relation="lessThanOrEqual" secondItem="HFs-Pf-h7x" secondAttribute="trailing" constant="35" id="Cau-Dr-MA1"/>
+                            <constraint firstItem="5IC-zh-qCP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="EKr-nX-zT7"/>
+                            <constraint firstItem="FN5-TI-Yd4" firstAttribute="top" secondItem="ROJ-OL-j4b" secondAttribute="bottom" constant="14" id="JdB-Om-Bpb"/>
+                            <constraint firstItem="oJQ-6A-pQo" firstAttribute="top" secondItem="ROJ-OL-j4b" secondAttribute="bottom" constant="17" id="L29-98-IE0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iC5-eK-gV9" secondAttribute="trailing" constant="82" id="VXC-TW-ESY"/>
+                            <constraint firstItem="5IC-zh-qCP" firstAttribute="top" secondItem="HFs-Pf-h7x" secondAttribute="bottom" constant="55" id="Y15-cA-IXk"/>
+                            <constraint firstItem="ZaV-AQ-jua" firstAttribute="top" secondItem="TmI-rJ-FBS" secondAttribute="bottom" constant="88.5" id="abP-3K-4Kk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="A03-x6-2sh" secondAttribute="bottom" constant="84" id="b8P-33-mvY"/>
+                            <constraint firstItem="iC5-eK-gV9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="dc8-0R-FxW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="A03-x6-2sh" secondAttribute="trailing" constant="101" id="diS-nu-mXA"/>
+                            <constraint firstItem="A03-x6-2sh" firstAttribute="top" secondItem="Ua0-gc-pX8" secondAttribute="bottom" constant="106" id="jgT-Ek-zdp"/>
+                            <constraint firstItem="TmI-rJ-FBS" firstAttribute="top" secondItem="iC5-eK-gV9" secondAttribute="bottom" constant="8" id="krM-ly-QZF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FN5-TI-Yd4" secondAttribute="trailing" constant="139" id="n4x-bd-B7d"/>
+                            <constraint firstItem="Ua0-gc-pX8" firstAttribute="leading" relation="lessThanOrEqual" secondItem="5IC-zh-qCP" secondAttribute="trailing" constant="66" id="nCc-9k-u8P"/>
+                            <constraint firstItem="ZaV-AQ-jua" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="nCz-AO-Rux"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ua0-gc-pX8" secondAttribute="trailing" constant="37" id="q08-LL-Gfg"/>
+                            <constraint firstItem="ROJ-OL-j4b" firstAttribute="leading" secondItem="ZaV-AQ-jua" secondAttribute="trailing" constant="31" id="s5I-wH-Sag"/>
+                            <constraint firstItem="HFs-Pf-h7x" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="uvl-c1-lRP"/>
+                            <constraint firstItem="FN5-TI-Yd4" firstAttribute="leading" secondItem="oJQ-6A-pQo" secondAttribute="trailing" constant="27.5" id="xxe-vH-Loc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ROJ-OL-j4b" secondAttribute="trailing" constant="82" id="yTc-JZ-Nox"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="picker" destination="ROJ-OL-j4b" id="WNN-FI-bvU"/>
+                        <outlet property="quantity" destination="oJQ-6A-pQo" id="YhV-7r-mck"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-686.95652173913049" y="-222.32142857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="1" width="700" height="394"/>
+    </resources>
 </document>

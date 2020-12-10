@@ -13,6 +13,12 @@
 		0640E6272581AB820064356D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0640E6252581AB820064356D /* Main.storyboard */; };
 		0640E6292581AB840064356D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0640E6282581AB840064356D /* Assets.xcassets */; };
 		0640E62C2581AB840064356D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0640E62A2581AB840064356D /* LaunchScreen.storyboard */; };
+		06A180562581ACAB00E8E9B0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A180552581ACAB00E8E9B0 /* User.swift */; };
+		06A180582581ACCF00E8E9B0 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A180572581ACCF00E8E9B0 /* Order.swift */; };
+		06A1805A2581ACF000E8E9B0 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A180592581ACF000E8E9B0 /* Drink.swift */; };
+		06A1805C2581AD0E00E8E9B0 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A1805B2581AD0E00E8E9B0 /* Resources.swift */; };
+		06A1805E2581AD3800E8E9B0 /* CoffeeMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A1805D2581AD3800E8E9B0 /* CoffeeMachine.swift */; };
+		06A180602581AD5600E8E9B0 /* Barista.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A1805F2581AD5600E8E9B0 /* Barista.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		0640E6282581AB840064356D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0640E62B2581AB840064356D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0640E62D2581AB840064356D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06A180552581ACAB00E8E9B0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		06A180572581ACCF00E8E9B0 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		06A180592581ACF000E8E9B0 /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
+		06A1805B2581AD0E00E8E9B0 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
+		06A1805D2581AD3800E8E9B0 /* CoffeeMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeMachine.swift; sourceTree = "<group>"; };
+		06A1805F2581AD5600E8E9B0 /* Barista.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Barista.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +72,12 @@
 				0640E6212581AB820064356D /* SceneDelegate.swift */,
 				0640E6232581AB820064356D /* ViewController.swift */,
 				0640E6252581AB820064356D /* Main.storyboard */,
+				06A180552581ACAB00E8E9B0 /* User.swift */,
+				06A180572581ACCF00E8E9B0 /* Order.swift */,
+				06A180592581ACF000E8E9B0 /* Drink.swift */,
+				06A1805B2581AD0E00E8E9B0 /* Resources.swift */,
+				06A1805D2581AD3800E8E9B0 /* CoffeeMachine.swift */,
+				06A1805F2581AD5600E8E9B0 /* Barista.swift */,
 				0640E6282581AB840064356D /* Assets.xcassets */,
 				0640E62A2581AB840064356D /* LaunchScreen.storyboard */,
 				0640E62D2581AB840064356D /* Info.plist */,
@@ -138,8 +156,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06A180562581ACAB00E8E9B0 /* User.swift in Sources */,
 				0640E6242581AB820064356D /* ViewController.swift in Sources */,
+				06A1805C2581AD0E00E8E9B0 /* Resources.swift in Sources */,
+				06A1805E2581AD3800E8E9B0 /* CoffeeMachine.swift in Sources */,
+				06A180602581AD5600E8E9B0 /* Barista.swift in Sources */,
+				06A180582581ACCF00E8E9B0 /* Order.swift in Sources */,
 				0640E6202581AB820064356D /* AppDelegate.swift in Sources */,
+				06A1805A2581ACF000E8E9B0 /* Drink.swift in Sources */,
 				0640E6222581AB820064356D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
